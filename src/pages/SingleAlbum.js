@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { useCallback } from 'react';
 import { useGlobalContext } from '../context';
 import functions from '../util/functions';
 
@@ -19,6 +18,7 @@ const SingleAlbum = () => {
   } else {
     const {
       name,
+      artistID,
       image,
       artist,
       year,
@@ -43,7 +43,13 @@ const SingleAlbum = () => {
             <p>
               <span className="drink-data">artist :</span>
               <span className={!artist && 'no-info'}>
-                {artist ? artist : 'No information available'}
+                {artist ? (
+                  <Link to={`/artist/${artistID}`} className="black-link">
+                    {artist}
+                  </Link>
+                ) : (
+                  'No information available'
+                )}
               </span>
             </p>
             <p>
@@ -79,7 +85,7 @@ const SingleAlbum = () => {
             {desc && (
               <p>
                 <span className="drink-data">description :</span>
-                <span>
+                <span className="normal-text">
                   {readMore.description ? desc : functions.truncate(desc, 40)}
                   <button
                     className="read-more-btn"
@@ -98,8 +104,8 @@ const SingleAlbum = () => {
             {review && (
               <p>
                 <span className="drink-data">review :</span>
-                {readMore.review ? review : functions.truncate(review, 40)}
-                <span>
+                <span className="normal-text">
+                  {readMore.review ? review : functions.truncate(review, 40)}
                   <button
                     className="read-more-btn"
                     onClick={() =>

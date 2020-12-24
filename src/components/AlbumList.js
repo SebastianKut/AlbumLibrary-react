@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Album from './Album';
 import Loading from './Loading';
 import { useGlobalContext } from '../context';
@@ -17,7 +17,12 @@ const AlbumList = () => {
   }
   return (
     <section className="section">
-      <h2 className="section-title">{`${searchTerm} discography`}</h2>
+      <h2 className="section-title">
+        <Link to={`/artist/${albums[0].artistID}`} className="band-link">
+          {searchTerm}
+        </Link>{' '}
+        discography
+      </h2>
       <div className="cocktails-center">
         {albums.map((item) => {
           return (

@@ -15,7 +15,7 @@ function Artist() {
   const [readMore, setReadMore] = useState(false);
   const { default_cover } = useGlobalContext();
 
-  const fetchArtist = async () => {
+  const fetchArtist = useCallback(async () => {
     setLoading(true);
     try {
       const response = await fetch(`${url + id}`);
@@ -61,11 +61,11 @@ function Artist() {
       console.log(error);
     }
     setLoading(false);
-  };
+  }, [id]);
 
   useEffect(() => {
     fetchArtist();
-  }, [id]);
+  }, [id, fetchArtist]);
 
   if (loading) return <Loading />;
 
@@ -153,7 +153,7 @@ function Artist() {
               <span className="drink-data">website :</span>
               <span className={!website && 'no-info'}>
                 {website ? (
-                  <a className="band-link" href={`http://${website}`}>
+                  <a className="black-link" href={`http://${website}`}>
                     {website}
                   </a>
                 ) : (
@@ -164,7 +164,7 @@ function Artist() {
             {bio && (
               <p>
                 <span className="drink-data">bio :</span>
-                <span>
+                <span className="normal-text">
                   {readMore ? bio : functions.truncate(bio, 40)}
                   <button
                     className="read-more-btn"

@@ -5,13 +5,15 @@ const Album = ({ id, artist, image, year, name, default_cover, artistID }) => {
   return (
     <article className="cocktail">
       <div className="image-container">
-        <img src={image ? image : default_cover} alt="album picture" />
+        <img src={image ? image : default_cover} alt="album cover" />
       </div>
       <div className="cocktail-footer">
         <div className="footer-info">
           <h5>{name}</h5>
           <h6>
-            <Link to={`/artist/${artistID}`}>{artist}</Link>
+            <Link to={`/artist/${artistID}`} className="band-link">
+              {artist}
+            </Link>
           </h6>
           <p>{year}</p>
         </div>

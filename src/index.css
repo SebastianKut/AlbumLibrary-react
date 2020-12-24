@@ -82,6 +82,9 @@ Helpers
   font-weight: 100;
 }
 
+.normal-text {
+  text-transform: none;
+}
 /* 
 ====== 
 Buttons 
@@ -139,6 +142,46 @@ Buttons
 .btn-details:hover {
   background: var(--offYellow);
 }
+
+.read-more-btn {
+  text-transform: capitalize;
+  display: inline-block;
+  font-weight: bold;
+  font-weight: 100;
+  letter-spacing: 2px;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  transition: var(--mainTransition);
+  border: none;
+  background-color: transparent;
+}
+
+.read-more-btn:hover {
+  color: var(--offYellow);
+  background-color: var(--mainBlack);
+  cursor: pointer;
+}
+
+/* 
+====== 
+Links
+======
+*/
+
+.black-link {
+  text-transform: none;
+  color: var(--mainBlack);
+  transition: var(--mainTransition);
+}
+
+.black-link:hover {
+  color: var(--mainYellow);
+}
+
+.band-link:hover {
+  color: var(--offYellow);
+}
+
 /* 
 ====== 
 Navbar
@@ -355,25 +398,6 @@ Cocktail
   padding-top: 2rem;
 }
 
-.read-more-btn {
-  text-transform: capitalize;
-  display: inline-block;
-  font-weight: bold;
-  font-weight: 100;
-  letter-spacing: 2px;
-  font-size: 0.75rem;
-  padding: 0.25rem 0.5rem;
-  transition: var(--mainTransition);
-  border: none;
-  background-color: transparent;
-}
-
-.read-more-btn:hover {
-  color: var(--offYellow);
-  background-color: var(--mainBlack);
-  cursor: pointer;
-}
-
 @media screen and (min-width: 992px) {
   .drink {
     display: grid;
@@ -450,16 +474,6 @@ Cocktail
 Artist
 ==== 
 */
-
-.band-link {
-  text-transform: none;
-  color: var(--mainBlack);
-  transition: var(--mainTransition);
-}
-
-.band-link:hover {
-  color: var(--mainYellow);
-}
 
 .social-icon {
   color: var(--mainBlack);

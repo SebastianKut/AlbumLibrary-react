@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import AlbumList from '../components/AlbumList';
 import SearchForm from '../components/SearchForm';
 
