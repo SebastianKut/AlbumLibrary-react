@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useCallback } from 'react';
 import { useGlobalContext } from '../context';
-import util from '../util/util';
+import functions from '../util/functions';
 
 const SingleAlbum = () => {
   const [readMore, setReadMore] = useState({
@@ -80,7 +80,7 @@ const SingleAlbum = () => {
               <p>
                 <span className="drink-data">description :</span>
                 <span>
-                  {readMore.description ? desc : util.truncate(desc, 40)}
+                  {readMore.description ? desc : functions.truncate(desc, 40)}
                   <button
                     className="read-more-btn"
                     onClick={() =>
@@ -98,7 +98,7 @@ const SingleAlbum = () => {
             {review && (
               <p>
                 <span className="drink-data">review :</span>
-                {readMore.review ? review : util.truncate(review, 40)}
+                {readMore.review ? review : functions.truncate(review, 40)}
                 <span>
                   <button
                     className="read-more-btn"

@@ -453,4 +453,22 @@ Artist
 
 .band-link {
   text-transform: none;
+  color: var(--mainBlack);
+  transition: var(--mainTransition);
+}
+
+.band-link:hover {
+  color: var(--mainYellow);
+}
+
+.social-icon {
+  color: var(--mainBlack);
+  margin: 0.3rem;
+  transition: var(--mainTransition);
+  position: relative;
+  top: 2px;
+}
+
+.social-icon:hover {
+  color: var(--mainYellow);
 }

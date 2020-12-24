@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Album from './Album';
 import Loading from './Loading';
 import { useGlobalContext } from '../context';
+import { Link } from 'react-router-dom';
 
 const AlbumList = () => {
   const { loading, albums, searchTerm, default_cover } = useGlobalContext();
+
   if (loading) {
     return <Loading />;
   }

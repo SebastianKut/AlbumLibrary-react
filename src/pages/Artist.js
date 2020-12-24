@@ -2,7 +2,9 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Loading from '../components/Loading';
 import { useGlobalContext } from '../context';
-import util from '../util/util';
+import functions from '../util/functions';
+import { FaFacebookSquare } from 'react-icons/fa';
+import { FaTwitterSquare } from 'react-icons/fa';
 
 const url = 'https://theaudiodb.com/api/v1/json/1/artist.php?i=';
 
@@ -36,6 +38,7 @@ function Artist() {
           strTwitter,
           strWebsite,
         } = artists[0];
+        const socialMedia = [strFacebook, strTwitter];
         const newArtist = {
           born: intBornYear,
           died: intDiedYear,
@@ -47,8 +50,7 @@ function Artist() {
           bio: strBiographyEN,
           country: strCountry,
           genre: strGenre,
-          facebook: strFacebook,
-          twitter: strTwitter,
+          social: socialMedia,
           website: strWebsite,
         };
         setArtist(newArtist);
@@ -76,13 +78,11 @@ function Artist() {
       formed,
       members,
       name,
-      logo,
       image,
       bio,
       country,
       genre,
-      facebook,
-      twitter,
+      social,
       website,
     } = artist;
     return (
@@ -96,6 +96,18 @@ function Artist() {
             <img src={image ? image : default_cover} alt="album cover"></img>
           </div>
           <div className="drink-info">
+            {born && (
+              <p>
+                <span className="drink-data">born :</span>
+                <span>{born}</span>
+              </p>
+            )}
+            {died && (
+              <p>
+                <span className="drink-data">died :</span>
+                <span>{died}</span>
+              </p>
+            )}
             <p>
               <span className="drink-data">origin :</span>
               <span className={!country && 'no-info'}>
@@ -120,12 +132,23 @@ function Artist() {
                 {members ? members : 'No information available'}
               </span>
             </p>
-            {/* <p>
-              <span className="drink-data">social :</span>
-              <span className={! && 'no-info'}>
-                {social ? social : 'No information available'}
+            <p>
+              <span className="drink-data">social media:</span>
+              <span className={!social && 'no-info'}>
+                {social ? (
+                  <>
+                    <a href={`https://${social[0]}`} className="social-icon">
+                      <FaFacebookSquare />
+                    </a>
+                    <a href={`https://${social[1]}`} className="social-icon">
+                      <FaTwitterSquare />
+                    </a>
+                  </>
+                ) : (
+                  'No information available'
+                )}
               </span>
-            </p> */}
+            </p>
             <p>
               <span className="drink-data">website :</span>
               <span className={!website && 'no-info'}>
@@ -142,7 +165,7 @@ function Artist() {
               <p>
                 <span className="drink-data">bio :</span>
                 <span>
-                  {readMore ? bio : util.truncate(bio, 40)}
+                  {readMore ? bio : functions.truncate(bio, 40)}
                   <button
                     className="read-more-btn"
                     onClick={() => setReadMore(!readMore)}
