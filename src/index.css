@@ -71,6 +71,18 @@ img {
 }
 
 /* 
+======
+Helpers
+====== 
+*/
+
+.no-info {
+  color: var(--darkGrey);
+  font-style: italic;
+  font-weight: 100;
+}
+
+/* 
 ====== 
 Buttons 
 ======
@@ -347,18 +359,18 @@ Cocktail
   text-transform: capitalize;
   display: inline-block;
   font-weight: bold;
-  margin-left: 0.5rem;
   font-weight: 100;
   letter-spacing: 2px;
   font-size: 0.75rem;
   padding: 0.25rem 0.5rem;
   transition: var(--mainTransition);
   border: none;
-  background-color: var(--mainYellow);
+  background-color: transparent;
 }
 
 .read-more-btn:hover {
-  background-color: var(--offYellow);
+  color: var(--offYellow);
+  background-color: var(--mainBlack);
   cursor: pointer;
 }
 

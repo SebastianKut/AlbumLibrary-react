@@ -45,55 +45,75 @@ const SingleAlbum = () => {
           <div className="drink-info">
             <p>
               <span className="drink-data">artist :</span>
-              {artist ? artist : 'No information available'}
+              <span className={!artist && 'no-info'}>
+                {artist ? artist : 'No information available'}
+              </span>
             </p>
             <p>
               <span className="drink-data">year of release :</span>
-              {year ? year : 'No information available'}
+              <span className={!year && 'no-info'}>
+                {year ? year : 'No information available'}
+              </span>
             </p>
             <p>
               <span className="drink-data">record lablel :</span>
-              {label ? label : 'No information available'}
+              <span className={!label && 'no-info'}>
+                {label ? label : 'No information available'}
+              </span>
             </p>
             <p>
               <span className="drink-data">genre :</span>
-              {genre ? genre : 'No information available'}
+              <span className={!genre && 'no-info'}>
+                {genre ? genre : 'No information available'}
+              </span>
             </p>
             <p>
               <span className="drink-data">mood :</span>
-              {mood ? mood : 'No information available'}
+              <span className={!mood && 'no-info'}>
+                {mood ? mood : 'No information available'}
+              </span>
             </p>
             <p>
               <span className="drink-data">format :</span>
-              {format ? format : 'No information available'}
+              <span className={!format && 'no-info'}>
+                {format ? format : 'No information available'}
+              </span>
             </p>
-            <p>
-              <span className="drink-data">description :</span>
-              {readMore.description ? desc : truncate(desc, 40)}
-              <button
-                className="read-more-btn"
-                onClick={() =>
-                  setReadMore({
-                    ...readMore,
-                    description: !readMore.description,
-                  })
-                }
-              >
-                {readMore.description ? 'Read less' : 'Read more'}
-              </button>
-            </p>
-            <p>
-              <span className="drink-data">review :</span>
-              {readMore.review ? review : truncate(review, 40)}
-              <button
-                className="read-more-btn"
-                onClick={() =>
-                  setReadMore({ ...readMore, review: !readMore.review })
-                }
-              >
-                {readMore.review ? 'Read less' : 'Read more'}
-              </button>
-            </p>
+            {desc && (
+              <p>
+                <span className="drink-data">description :</span>
+                <span>
+                  {readMore.description ? desc : truncate(desc, 40)}
+                  <button
+                    className="read-more-btn"
+                    onClick={() =>
+                      setReadMore({
+                        ...readMore,
+                        description: !readMore.description,
+                      })
+                    }
+                  >
+                    {readMore.description ? 'Read less' : 'Read more'}
+                  </button>
+                </span>
+              </p>
+            )}
+            {review && (
+              <p>
+                <span className="drink-data">review :</span>
+                {readMore.review ? review : truncate(review, 40)}
+                <span>
+                  <button
+                    className="read-more-btn"
+                    onClick={() =>
+                      setReadMore({ ...readMore, review: !readMore.review })
+                    }
+                  >
+                    {readMore.review ? 'Read less' : 'Read more'}
+                  </button>
+                </span>
+              </p>
+            )}
           </div>
         </div>
       </section>
