@@ -21,6 +21,7 @@ const AppProvider = ({ children }) => {
         const albumsList = album.map((item) => {
           const {
             idAlbum,
+            idArtist,
             strAlbum,
             strAlbumThumb,
             strArtist,
@@ -34,6 +35,7 @@ const AppProvider = ({ children }) => {
           } = item;
           return {
             id: idAlbum,
+            artistID: idArtist,
             name: strAlbum,
             image: strAlbumThumb,
             artist: strArtist,

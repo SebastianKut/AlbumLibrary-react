@@ -444,3 +444,13 @@ Cocktail
     height: 5em;
   }
 }
+
+/* 
+====
+Artist
+==== 
+*/
+
+.band-link {
+  text-transform: none;
+}

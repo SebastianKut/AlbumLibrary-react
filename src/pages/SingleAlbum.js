@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useCallback } from 'react';
 import { useGlobalContext } from '../context';
+import util from '../util/util';
 
 const SingleAlbum = () => {
   const [readMore, setReadMore] = useState({
@@ -12,10 +13,6 @@ const SingleAlbum = () => {
   const { albums, default_cover } = useGlobalContext();
 
   const singleAlbum = albums.filter((album) => album.id === id)[0];
-
-  const truncate = (str, n) => {
-    return str.length > n ? str.substr(0, n - 1) + '...' : str;
-  };
 
   if (!singleAlbum) {
     return <h2 className="section-title">no album to display</h2>;
@@ -83,7 +80,7 @@ const SingleAlbum = () => {
               <p>
                 <span className="drink-data">description :</span>
                 <span>
-                  {readMore.description ? desc : truncate(desc, 40)}
+                  {readMore.description ? desc : util.truncate(desc, 40)}
                   <button
                     className="read-more-btn"
                     onClick={() =>
@@ -101,7 +98,7 @@ const SingleAlbum = () => {
             {review && (
               <p>
                 <span className="drink-data">review :</span>
-                {readMore.review ? review : truncate(review, 40)}
+                {readMore.review ? review : util.truncate(review, 40)}
                 <span>
                   <button
                     className="read-more-btn"

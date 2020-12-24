@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import SingleAlbum from './pages/SingleAlbum';
 import Error from './pages/Error';
+import Artist from './pages/Artist';
 // import components
 import Navbar from './components/Navbar';
 function App() {
@@ -20,6 +21,9 @@ function App() {
         </Route>
         <Route path="/album/:id">
           <SingleAlbum />
+        </Route>
+        <Route path="/artist/:id">
+          <Artist />
         </Route>
         <Route path="*">
           <Error />
