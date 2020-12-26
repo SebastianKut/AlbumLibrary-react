@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 
 const Album = ({ id, artist, image, year, name, default_cover, artistID }) => {
   return (
-    <article className="cocktail">
+    <article className="album">
       <div className="image-container">
         <img src={image ? image : default_cover} alt="album cover" />
       </div>
-      <div className="cocktail-footer">
+      <div className="album-footer">
         <div className="footer-info">
           <h5>{name}</h5>
           <h6>

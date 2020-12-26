@@ -1,4 +1,7 @@
-# Music Album Database - react app
+# Music Album Database - ReactJS Web App
+
+## Live site - http://SebastianKut.github.io/AlbumLibrary-react"
 
 Search music albums by artists name.
-App was build with React JS and it uses an external API fetching artist data. It utilizes react concepts such as: functional components, hooks, Context Api and Router
+
+App was build with React JS and it uses an external API (audiodb.com) fetching artist data. It utilizes react following react concepts: functional components, hooks, context api and router.

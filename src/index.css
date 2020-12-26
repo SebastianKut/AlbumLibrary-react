@@ -255,7 +255,7 @@ Error
 }
 /* 
 ====== 
-Cocktails List 
+albums List 
 ======
 */
 
@@ -270,7 +270,7 @@ Cocktails List
   margin-bottom: 3.5rem;
   margin-top: 1rem;
 }
-.cocktails-center {
+.albums-center {
   width: var(--smallWidth);
   margin: 0 auto;
   max-width: var(--fullWidth);
@@ -280,17 +280,17 @@ Cocktails List
   /* align-items: start; */
 }
 @media screen and (min-width: 576px) {
-  .cocktails-center {
+  .albums-center {
     grid-template-columns: repeat(auto-fill, minmax(338.8px, 1fr));
   }
 }
 /* 
 ====== 
-Cocktail 
+album 
 ======
 */
 
-.cocktail {
+.album {
   background: var(--mainWhite);
   margin-bottom: 2rem;
   box-shadow: var(--lightShadow);
@@ -299,28 +299,28 @@ Cocktail
   grid-template-rows: auto 1fr;
   border-radius: var(--mainBorderRadius);
 }
-.cocktail:hover {
+.album:hover {
   box-shadow: var(--darkShadow);
 }
-.cocktail img {
+.album img {
   height: 20rem;
   object-fit: cover;
   border-top-left-radius: var(--mainBorderRadius);
   border-top-right-radius: var(--mainBorderRadius);
 }
-.cocktail-footer {
+.album-footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
   padding: 1.5rem;
 }
-.cocktail-footer h5,
-.cocktail-footer h6,
-.cocktail-footer p {
+.album-footer h5,
+.album-footer h6,
+.album-footer p {
   margin-bottom: 0.3rem;
 }
-.cocktail-footer p {
+.album-footer p {
   color: var(--darkGrey);
   margin-bottom: 0.5rem;
   font-size: small;
@@ -364,47 +364,47 @@ Form
 }
 /* 
 ====== 
-Cocktail
+album
 ======
 */
 
-.cocktail-section {
+.album-section {
   text-align: center;
 }
-.drink {
+.record {
   width: var(--smallWidth);
   max-width: var(--fullWidth);
   margin: 0 auto;
   text-align: left;
 }
-.drink img {
+.record img {
   border-radius: var(--mainBorderRadius);
 }
-.drink p {
+.record p {
   font-weight: bold;
   text-transform: capitalize;
   line-height: 1.8;
 }
-.drink span {
+.record span {
   margin-right: 0.5rem;
 }
-.drink-data {
+.record-data {
   background: var(--primaryLightColor);
   padding: 0.25rem 0.5rem;
   border-radius: var(--mainBorderRadius);
   color: var(--primaryColor);
 }
-.drink-info {
+.record-info {
   padding-top: 2rem;
 }
 
 @media screen and (min-width: 992px) {
-  .drink {
+  .record {
     display: grid;
     grid-template-columns: 2fr 3fr;
     gap: 3rem;
   }
-  .drink-info {
+  .record-info {
     padding-top: 0;
   }
 }

@@ -30,18 +30,18 @@ const SingleAlbum = () => {
       format,
     } = singleAlbum;
     return (
-      <section className="section cocktail-section">
+      <section className="section album-section">
         <Link to="/" className="btn btn-primary">
           back home
         </Link>
         <h2 className="section-title">{name}</h2>
-        <div className="drink">
-          <div className="drink-cover">
+        <div className="record">
+          <div className="record-cover">
             <img src={image ? image : default_cover} alt="album cover"></img>
           </div>
-          <div className="drink-info">
+          <div className="record-info">
             <p>
-              <span className="drink-data">artist :</span>
+              <span className="record-data">artist :</span>
               <span className={!artist && 'no-info'}>
                 {artist ? (
                   <Link to={`/artist/${artistID}`} className="black-link">
@@ -53,38 +53,38 @@ const SingleAlbum = () => {
               </span>
             </p>
             <p>
-              <span className="drink-data">year of release :</span>
+              <span className="record-data">year of release :</span>
               <span className={!year && 'no-info'}>
                 {year ? year : 'No information available'}
               </span>
             </p>
             <p>
-              <span className="drink-data">record lablel :</span>
+              <span className="record-data">record lablel :</span>
               <span className={!label && 'no-info'}>
                 {label ? label : 'No information available'}
               </span>
             </p>
             <p>
-              <span className="drink-data">genre :</span>
+              <span className="record-data">genre :</span>
               <span className={!genre && 'no-info'}>
                 {genre ? genre : 'No information available'}
               </span>
             </p>
             <p>
-              <span className="drink-data">mood :</span>
+              <span className="record-data">mood :</span>
               <span className={!mood && 'no-info'}>
                 {mood ? mood : 'No information available'}
               </span>
             </p>
             <p>
-              <span className="drink-data">format :</span>
+              <span className="record-data">format :</span>
               <span className={!format && 'no-info'}>
                 {format ? format : 'No information available'}
               </span>
             </p>
             {desc && (
               <p>
-                <span className="drink-data">description :</span>
+                <span className="record-data">description :</span>
                 <span className="normal-text">
                   {readMore.description ? desc : functions.truncate(desc, 40)}
                   <button
@@ -103,7 +103,7 @@ const SingleAlbum = () => {
             )}
             {review && (
               <p>
-                <span className="drink-data">review :</span>
+                <span className="record-data">review :</span>
                 <span className="normal-text">
                   {readMore.review ? review : functions.truncate(review, 40)}
                   <button

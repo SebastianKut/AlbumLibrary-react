@@ -23,7 +23,7 @@ const AlbumList = () => {
         </Link>{' '}
         discography
       </h2>
-      <div className="cocktails-center">
+      <div className="albums-center">
         {albums.map((item) => {
           return (
             <Album key={item.id} {...item} default_cover={default_cover} />

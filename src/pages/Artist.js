@@ -86,54 +86,54 @@ function Artist() {
       website,
     } = artist;
     return (
-      <section className="section cocktail-section">
+      <section className="section album-section">
         <Link to="/" className="btn btn-primary">
           back home
         </Link>
         <h2 className="section-title">{name}</h2>
-        <div className="drink">
-          <div className="drink-cover">
+        <div className="record">
+          <div className="record-cover">
             <img src={image ? image : default_cover} alt="album cover"></img>
           </div>
-          <div className="drink-info">
+          <div className="record-info">
             {born && (
               <p>
-                <span className="drink-data">born :</span>
+                <span className="record-data">born :</span>
                 <span>{born}</span>
               </p>
             )}
             {died && (
               <p>
-                <span className="drink-data">died :</span>
+                <span className="record-data">died :</span>
                 <span>{died}</span>
               </p>
             )}
             <p>
-              <span className="drink-data">origin :</span>
+              <span className="record-data">origin :</span>
               <span className={!country && 'no-info'}>
                 {country ? country : 'No information available'}
               </span>
             </p>
             <p>
-              <span className="drink-data">genre:</span>
+              <span className="record-data">genre:</span>
               <span className={!genre && 'no-info'}>
                 {genre ? genre : 'No information available'}
               </span>
             </p>
             <p>
-              <span className="drink-data">formed :</span>
+              <span className="record-data">formed :</span>
               <span className={!formed && 'no-info'}>
                 {formed ? formed : 'No information available'}
               </span>
             </p>
             <p>
-              <span className="drink-data">number of members :</span>
+              <span className="record-data">number of members :</span>
               <span className={!members && 'no-info'}>
                 {members ? members : 'No information available'}
               </span>
             </p>
             <p>
-              <span className="drink-data">social media:</span>
+              <span className="record-data">social media:</span>
               <span className={!social && 'no-info'}>
                 {social ? (
                   <>
@@ -150,7 +150,7 @@ function Artist() {
               </span>
             </p>
             <p>
-              <span className="drink-data">website :</span>
+              <span className="record-data">website :</span>
               <span className={!website && 'no-info'}>
                 {website ? (
                   <a className="black-link" href={`http://${website}`}>
@@ -163,7 +163,7 @@ function Artist() {
             </p>
             {bio && (
               <p>
-                <span className="drink-data">bio :</span>
+                <span className="record-data">bio :</span>
                 <span className="normal-text">
                   {readMore ? bio : functions.truncate(bio, 40)}
                   <button

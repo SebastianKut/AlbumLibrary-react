@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as HashRouter, Route, Switch } from 'react-router-dom';
 // import pages
 import Home from './pages/Home';
 import About from './pages/About';
@@ -8,9 +8,11 @@ import Error from './pages/Error';
 import Artist from './pages/Artist';
 // import components
 import Navbar from './components/Navbar';
+// using hashRouter with github sub directory becasue of gh pages lack of support for single page apps
+
 function App() {
   return (
-    <Router>
+    <HashRouter basename="/AlbumLibrary-react">
       <Navbar />
       <Switch>
         <Route exact path="/">
@@ -29,7 +31,7 @@ function App() {
           <Error />
         </Route>
       </Switch>
-    </Router>
+    </HashRouter>
   );
 }
 
