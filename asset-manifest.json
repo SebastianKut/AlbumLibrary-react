@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/AlbumLibrary-react/static/css/main.98d0a7cf.chunk.css",
-    "main.js": "/AlbumLibrary-react/static/js/main.22efae8e.chunk.js",
-    "main.js.map": "/AlbumLibrary-react/static/js/main.22efae8e.chunk.js.map",
+    "main.js": "/AlbumLibrary-react/static/js/main.7c41d077.chunk.js",
+    "main.js.map": "/AlbumLibrary-react/static/js/main.7c41d077.chunk.js.map",
     "runtime-main.js": "/AlbumLibrary-react/static/js/runtime-main.8cec1070.js",
     "runtime-main.js.map": "/AlbumLibrary-react/static/js/runtime-main.8cec1070.js.map",
     "static/js/2.8b9d661e.chunk.js": "/AlbumLibrary-react/static/js/2.8b9d661e.chunk.js",
     "static/js/2.8b9d661e.chunk.js.map": "/AlbumLibrary-react/static/js/2.8b9d661e.chunk.js.map",
     "index.html": "/AlbumLibrary-react/index.html",
-    "precache-manifest.5a7cfe6e201489919c692be2410b0ae4.js": "/AlbumLibrary-react/precache-manifest.5a7cfe6e201489919c692be2410b0ae4.js",
+    "precache-manifest.0a0e9bbba3e0cf81ea308351c4b00b0d.js": "/AlbumLibrary-react/precache-manifest.0a0e9bbba3e0cf81ea308351c4b00b0d.js",
     "service-worker.js": "/AlbumLibrary-react/service-worker.js",
     "static/css/main.98d0a7cf.chunk.css.map": "/AlbumLibrary-react/static/css/main.98d0a7cf.chunk.css.map",
     "static/js/2.8b9d661e.chunk.js.LICENSE.txt": "/AlbumLibrary-react/static/js/2.8b9d661e.chunk.js.LICENSE.txt",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.8cec1070.js",
     "static/js/2.8b9d661e.chunk.js",
     "static/css/main.98d0a7cf.chunk.css",
-    "static/js/main.22efae8e.chunk.js"
+    "static/js/main.7c41d077.chunk.js"
   ]
 }
